@@ -30,6 +30,45 @@ html{
 section{
     padding: 100px 0;
 }
+.home{
+    display: flex;
+    justify-content: space-between;
+}
+.social a{
+    color: chartreuse;
+    
+}
+.social{
+    margin-right: 20px;
+    margin-top: 80px;
+    list-style: none;
+    
+}
+.social li {
+    padding-bottom: 20px;
+}
+.social a:hover {
+    color: crimson;
+}
+.social li a i{
+    font-size: 40px;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rotate{
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(200deg);}
+}
+
+
+
+
+
+
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -391,6 +430,7 @@ section .title::after{
 }
 .teams .carousel .card:hover{
     background: crimson;
+    
 }
 .teams .carousel .card .box{
     display: flex;
@@ -682,3 +722,48 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+
+
+.social-icon{
+    display: flex;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  list-style: none;
+}
+
+.social-icon li{
+    margin: 0 5px;
+  }
+  .social-icon li a{
+    display: block;
+    height: 50px;
+    width: 80px;
+    color: rgb(199, 199, 201);
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(200px);
+    background: #242121;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  .card:hover .box ul > li > a{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .card:hover .box ul > li:nth-child(2) a{
+    transition-delay: 0.1s;
+  }
+  .card:hover .box ul > li:nth-child(3) a{
+    transition-delay: 0.2s;
+  }
+  .card:hover .box ul> li:nth-child(4) a{
+    transition-delay: 0.3s;
+  }
+  .card:hover .box ul > li:nth-child(5) a{
+    transition-delay: 0.4s;
+  }
